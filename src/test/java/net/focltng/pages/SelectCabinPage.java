@@ -1,6 +1,11 @@
 package net.focltng.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import net.focltng.utils.WebCtrls;
 
 public class SelectCabinPage {
 	
@@ -32,11 +37,11 @@ public class SelectCabinPage {
 
 	public By ReviewCartButtonOnMiniCartSideMenu = By.xpath("//span[@sp-label='label.minicart.ReviewCart']");
 	
-	public By SelectOccupanycabinfromcabindetailspage(String Ocuupancy ) {return By.xpath("//span[@class='ng-binding'][text()='"+Ocuupancy+"']/../..//input[@type='radio']");}
+	public By SelectOccupanyCabinFromCabinDetailsPage(String Ocuupancy ) {return By.xpath("//span[@class='ng-binding'][text()='"+Ocuupancy+"']/../..//input[@type='radio']");}
 		
-	public By FirstNameOfthePassengerList  = By.xpath("//div[@class='pax-info-th ng-isolate-scope']//li");
+	public By FirstNameOfThePassengerList  = By.xpath("//div[@class='pax-info-th ng-isolate-scope']//li");
 		
-	public By EnterTheFirstNameOfthePassenger  = By.id("carttypeaheadname");
+	public By EnterTheFirstNameOfThePassenger  = By.id("carttypeaheadname");
 	
 	public By AutoAssignButtonOnCabinCategoryPage = By.xpath("//button[@sp-label='label.cruiseshopping.commonlabel.AutoAssign']");
 	
@@ -50,39 +55,55 @@ public class SelectCabinPage {
 	
 	public By LeadTravellerFirstNameFieldSuggestionList(String LeadTraveller ) {return By.xpath("//span[text()='"+LeadTraveller+"']");}
 
-
+	//Thushara
 	public By SelectFacilityUnderCabinSelectionBox = By.xpath("//span[normalize-space()='Select facility']");
 	
-	public By SelectFacilityUnderCabinSelectionBox2 = By.xpath("(//span[normalize-space()='Select Facility'])[1]");
+	//lekshmi
+	public By SelectFacilityUnderCabinSelectionBoxForAutoAssign = By.xpath("(//span[normalize-space()='Select Facility'])[1]");
 	
-	public By CheckFaclitynum(String Num) {return By.xpath("//div[@data-title='"+Num+"']//input[@type='checkbox']");}
+	//Thushara
+	public By CheckFaclityNum(String Num) {return By.xpath("//div[@data-title='"+Num+"']//input[@type='checkbox']");}
 	
-	public By CheckFacilitynumCheckbox= By.xpath("(//input[@class='m-0 p-0 ng-valid ng-dirty ng-valid-parse ng-touched'])[2]");
+	//Thushara
+	public By CheckFacilityNumCheckbox= By.xpath("(//input[@class='m-0 p-0 ng-valid ng-dirty ng-valid-parse ng-touched'])[2]");
 	
+	//Thushara
 	public By SelectFacilityUnderCabinSelectionSearchBox = By.xpath("//*[@id=\"select2-drop\"]/div/input");
 	
+	//Thushara
 	public By SelectFacilityUnderCabinSelectionCheckBox = By.xpath("//input[@id='auto_checkBox_cabin__A1']");
 	
-	public By SelectTwoOccupanycabinfromcabindetailspage = By.xpath("//span[@class='ng-binding'][text()='3']/../..//input[@type='radio']");
 	
-	//public By FacilityAdditionCheckboxUnderConfirmationpage2 = By.xpath("//input[@id='auto_checkBox_cabin__A1']");
+	public By SelectOccupanycabinfromcabindetailspage = By.xpath("//span[@class='ng-binding'][text()='3']/../..//input[@type='radio']");
 	
+	//lekshmi
+	public By FacilityAdditionCheckboxUnderConfirmationpage2 = By.xpath("//input[@id='auto_checkBox_cabin__A1']");
+	
+	//lekshmi
 	public By FacilityAdditionCheckboxUnderCabinpage2 = By.className("m-0 p-0 ng-valid ng-dirty ng-valid-parse ng-touched");
 	
+	//Thushara
 	public By FacilityAdditionAddButton=By.xpath("//a[@class='actn_ic add ng-scope']");
 	
+	//Thushara
 	public By InitialCountOnSelectionCabin = By.xpath("//i[@class='din_box avl ng-binding ng-scope']");
 	
+	//Thushara
 	public By InitialCountOnSelectionCabinDirectCustomerLogin = By.xpath("(//label[@sp-label='label.bookingConfirmation.cruise.facilities.waitlist']/following::label)[1]");
 	
+	//Thushara
 	public By InitialCountOnSelectionCabinForSecondFacility = By.xpath("(//label[@sp-label='label.bookingConfirmation.cruise.facilities.waitlist']/following::label)[3]");
 	
+	//Thushara
     public By InitialWaitlistCountOnCabinSelectionPageOfFirstfacility =By.xpath("(//label[@sp-label='label.bookingConfirmation.cruise.facilities.waitlist']/following::label)[2]");
-    
+   
+    //lekshmi
     public By InitialWaitlistCountOnCabinSelectionPageForAutoAssign =By.xpath("(//label[@sp-label='label.bookingConfirmation.cruise.facilities.waitlist']/following::i)[2]");
     
+  //Thushara
     public By InitialWaitlistCountOnCabinSelectionPageOfSecondFacility =By.xpath("(//label[@sp-label='label.bookingConfirmation.cruise.facilities.waitlist']/following::label)[4]");
     
+ 
     public By DetailsButtonOnTheCabinSelectionPage = By.xpath("//label[@ng-show='!categoryDetail.showDetail']");
     
     public By InfoTabOnTheCabinSelectionPage = By.xpath("//a[normalize-space()='Info']");
@@ -95,12 +116,38 @@ public class SelectCabinPage {
 
 	public By PromocodeValidation(String Promocode) {return By.xpath("//span[contains(@key,'"+Promocode+"')]/..//..//input[@checked='checked']");}
 
-	public By DateValidation = By.xpath("((//button[text()='PROCEED'])[1]/..//..//../div//label)[4]");
+	public By RateTypeValidation(String RateType) {return By.xpath("//span[@class='hd_lbl text-center dot-view ng-binding sltd']");}
+	
 
 	
 	
-    
-}
+	
+	public By SpecificOccupancyOnCabinCategoryPage(String Occupancy, int i) {return By.xpath("(//span[@key='"+Occupancy+"']//ancestor::div[contains(@ng-class,'categoryDetail.showDetail&&categoryDetail')]//span[contains(@ng-if,'isShowPerPersonPrice')])["+i+"]");}
+
+	public By SelectCabinSpecificRadioButtonFromTheCabinCategoryListOfAutoAssign(int i) {return By.xpath("(//input[@ng-checked='ratePlanDetail.selectedRateplan && eachCabin.isSelected']/..//input[@type='radio'])["+i+"]");}
+	
+	public By SelectOccupanyCabinFromTheCabinList(String Occupancy) {return By.xpath("//span[@key='" + Occupancy + "']/../../../..//input[@type='radio']");}
+
+	
+	
+	
+	
+	public void SelectCabinCategoryRadioButtonSpecificOccupancy(String Occupancy) {
+	//	List<WebElement> CabinCategoryRadioButtonCount = WebCtrls.Ctrls(SelectCabinSpecificRadioButtonFromTheCabinCategoryListOfAutoAssign (Occupancy));
+		List<WebElement> CabinCategoryRadioButtonCount = WebCtrls.Ctrls(SelectOccupanyCabinFromTheCabinList (Occupancy));
+		for(int i=1;i<CabinCategoryRadioButtonCount.size();i++)
+		{
+			if (!WebCtrls.GetText(SpecificOccupancyOnCabinCategoryPage(Occupancy,i)).equals("GBP 0.00")  )
+				{
+					WebCtrls.JavascriptClick(SelectCabinSpecificRadioButtonFromTheCabinCategoryListOfAutoAssign(i));
+					WebCtrls.DeadWait(2000);
+					break;
+				}
+			
+		}
+	
+	
+	}}
 
 
 

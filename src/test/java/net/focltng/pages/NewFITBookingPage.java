@@ -20,8 +20,10 @@ public class NewFITBookingPage {
 
 	public By ShowVoyagesButtonUnderCruiseTab = By.xpath("//button[text()='Show Voyages']");
 
+	//Thushara
 	public By MyRecentBookingsOrCartsUnderCruiseTab = By.xpath("//a[@sp-label='label.landingpage.myRecentBookings']");
 
+	//Thushara
 	public By RecentBookingsIdListUnderCruiseTab = By.xpath("//a[contains(@class,'recentbookingsID')]");
 
 	public By SelectOccupanyCabinFromTheCabinList(String Occupancy) {return By.xpath("//span[@key='" + Occupancy + "']/../../../..//input[@type='radio']");}
@@ -77,6 +79,16 @@ public class NewFITBookingPage {
 	
 	public By ApplyButtonUnderNewFITBooking2=By.xpath("//button[text()='Apply']");
 
+	public By RateTypeFieldUnderNewFITBookingPage=By.xpath("//li[normalize-space()='Select Rate type']");
+	
+	public By RateClassificationFieldUnderNewFITBookingPage=By.xpath("//li[normalize-space()='Select Rate classification']");
+	
+	public By RateTypeDropdown = By.xpath("//div[@class='select2-result-label']");
+	
+	public By RateClassificationDropdown= By.xpath("//div[@class='select2-result-label']");
+	
+	
+	
 	
 	
 }

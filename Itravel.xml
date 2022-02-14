@@ -9,12 +9,15 @@
 		<classes>
 			<class name="net.focltng.testcases.TestCases">
 				<methods>
-					<exclude name="TC_045" />
-					<exclude name="TC_046" />
-					<exclude name="TC_047" />
-					<exclude name="TC_048" />
-					<exclude name="TC_049" />
+					<exclude name="TC_019" />
+					<exclude name="TC_069" />
+					<exclude name="TC_086" />
 					<exclude name="TC_089" />
+					<exclude name="TC_090" />
+					<exclude name="TC_091" />
+					<exclude name="TC_071" />
+					<exclude name="TC_088" />
+					<exclude name="TC_021" />
 				</methods>
 			</class>
 		</classes>

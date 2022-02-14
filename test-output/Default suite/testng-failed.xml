@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="net.focltng.testcases.T007">
+      <class name="net.focltng.testcases.TestCases">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="TC_019"/>
+          <include name="SellingApp_Cruise_Facilities_TC048"/>
         </methods>
-      </class> <!-- net.focltng.testcases.T007 -->
+      </class> <!-- net.focltng.testcases.TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

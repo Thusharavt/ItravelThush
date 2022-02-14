@@ -40,7 +40,7 @@ public class T007 extends BaseTest {
 /// @Author : Thushara
 /// </summary>
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void TC_019() {
 		ExcelHelperMap = ExcelHelper.getExcelData();
 		Listeners listeners = new Listeners();
@@ -99,7 +99,7 @@ public class T007 extends BaseTest {
 		
 		WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
 		WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
-		WebCtrls.DeadWait(2000);
+		WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 		WebCtrls.PerfectClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 		WebCtrls.PerfectClick(selectCabinPage.InfoTabOnTheCabinSelectionPage);
 		WebCtrls.PerfectClick(selectCabinPage.IdentifiersTabOnTheCabinSelectionPage);
@@ -139,12 +139,12 @@ public class T007 extends BaseTest {
 		WebCtrls.DeadWait(5000);
 		WebCtrls.CloseCurrentWindow();
 		WebCtrls.SwithToLastWindow();
-		assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+		Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
 		listeners.addLog("TC_069", "Selling App page Loaded");
 
 		WebCtrls.WaitForElement(sellingAppHomePage.AgencyOnTheSellingAppHomePage);
 		WebCtrls.PerfectEditWithTimeOut(sellingAppHomePage.AgencyOnTheSellingAppHomePage,ExcelHelperMap.get("AgencyCode"));
-		assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage),"Agency Code sugesstion not Loaded");
+		Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage),"Agency Code sugesstion not Loaded");
 		listeners.addLog("TC_069", "Agency code displayed");
 
 		WebCtrls.PerfectClick(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage);
@@ -164,12 +164,12 @@ public class T007 extends BaseTest {
 		WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab,ExcelHelperMap.get("RatePlan"));
 		WebCtrls.PerfectSendKeys(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab, Keys.ENTER);
 		WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
-		assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+		Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
 		listeners.addLog("TC_069", "Cruise Selection page Loaded");
 		
 		WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
 		WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
-		WebCtrls.DeadWait(5000);
+		WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 		WebCtrls.JavascriptClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 		WebCtrls.JavascriptClick(selectCabinPage.InfoTabOnTheCabinSelectionPage);
 		WebCtrls.JavascriptClick(selectCabinPage.IdentifiersTabOnTheCabinSelectionPage);
@@ -209,7 +209,7 @@ public class T007 extends BaseTest {
 		WebCtrls.DeadWait(5000);
 		WebCtrls.CloseCurrentWindow();
 		WebCtrls.SwithToLastWindow();
-		assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+		Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
 		listeners.addLog("TC_086", "Seeling App page Loaded");
 
 		WebCtrls.PerfectClick(newFITBookingPage.FirstNameFieldUnderNewFITBooking);
@@ -240,12 +240,12 @@ public class T007 extends BaseTest {
 		WebCtrls.PerfectClick(newFITBookingPage.AddCabinButtonUnderNewFITBooking);
 		WebCtrls.PerfectClick(newFITBookingPage.DoneButtonOnPassengersAreaUnderCruiseTab);
 		WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
-		assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+		Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
 		listeners.addLog("TC_086", "Cruise Selection page Loaded");
 		
 		WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
 		WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
-		WebCtrls.DeadWait(2000);
+		WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 		WebCtrls.PerfectClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 		WebCtrls.PerfectClick(selectCabinPage.InfoTabOnTheCabinSelectionPage);
 		WebCtrls.PerfectClick(selectCabinPage.IdentifiersTabOnTheCabinSelectionPage);
@@ -286,7 +286,7 @@ public class T007 extends BaseTest {
 			WebCtrls.DeadWait(5000);
 			WebCtrls.CloseCurrentWindow();
 			WebCtrls.SwithToLastWindow();
-			assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+			Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
 			listeners.addLog("TC_089", "Selling App page Loaded");
 
 			WebCtrls.PerfectClick(newFITBookingPage.FirstNameFieldUnderNewFITBooking);
@@ -318,36 +318,27 @@ public class T007 extends BaseTest {
 			WebCtrls.PerfectClick(newFITBookingPage.AddCabinButtonUnderNewFITBooking);
 			WebCtrls.PerfectClick(newFITBookingPage.DoneButtonOnPassengersAreaUnderCruiseTab);
 			WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
-			assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+			Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
 			listeners.addLog("TC_089", "Cruise Selection page Loaded");
 			
-//			String SailingStartDate = ExcelHelperMap.get("SailingStartDateB2B");
-//			String SailingEndDate = ExcelHelperMap.get("SailingEndDateB2B");
-//			String Startdate = WebCtrls.GetTextWithTimeOut(selectCabinPage.DateValidation);
-//		    int compareValuewithstartdate = SailingStartDate.compareTo(Startdate);
-//		    int compareValuewithEnddate = SailingEndDate.compareTo(Startdate);
-//		    Assert.assertTrue(compareValuewithstartdate <= 0 && compareValuewithEnddate>=0,"Cruise Startdate is not verified");
-//			listeners.addLog("TC_089", "Cruise start date is displayed");
-			
-			
-
 			String SailingStartDate=ExcelHelperMap.get("SailingStartDateB2B");
 			String SailingEndDate = ExcelHelperMap.get("SailingEndDateB2B");
-			String Startdate = WebCtrls.GetTextWithTimeOut(selectCabinPage.DateValidation);
+			String Startdate = WebCtrls.GetTextWithTimeOut(cruiseSelectionPage.DateValidation);
 		    Date DSailingStartDate=new SimpleDateFormat("MM/dd/yyyy").parse(SailingStartDate);  
 		    Date DSailingEndDate=new SimpleDateFormat("MM/dd/yyyy").parse(SailingEndDate);  
 		    Date DStartdate=new SimpleDateFormat("MM/dd/yyyy").parse(Startdate);  
-		    Assert.assertTrue(DSailingStartDate.before(DStartdate) && DSailingEndDate.after(DStartdate),"Cruise Startdate is not verified");
-		    listeners.addLog("TC_091", "Cruise start date is displayed");
+		    Assert.assertTrue(DSailingStartDate.before(DStartdate) || DSailingStartDate.equals(DStartdate) && DSailingEndDate.after(DStartdate) || DSailingEndDate.equals(DStartdate),"Cruise Startdate is not verified");
+		  //  Assert.assertTrue(DSailingStartDate.before(DStartdate) ^ DSailingStartDate.equals(DStartdate) ^ DSailingEndDate.after(DStartdate) ^ DSailingEndDate.equals(DStartdate),"Cruise Startdate is not verified");
+		    listeners.addLog("TC_089", "Cruise start date is displayed");
 			
 			WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
 			WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
-			WebCtrls.DeadWait(2000);
+			WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 			Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.CabincategoryValidation(ExcelHelperMap.get("CategoryClass"))),"CategoryClass is not verified");
 			listeners.addLog("TC_089", "Cabincategory class is displayed");
 
 			WebCtrls.PerfectClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
-			assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.PromocodeValidation(ExcelHelperMap.get("PromoCode"))),"Promocode is not Verified");
+			Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.PromocodeValidation(ExcelHelperMap.get("PromoCode"))),"Promocode is not Verified");
 			listeners.addLog("TC_089", "Promocode is displayed");
 			
 			
@@ -360,8 +351,6 @@ public class T007 extends BaseTest {
 		
 		//<summary>
 		/// Test Case Title : Verify that the user is able to narrow down the search for a particular Cruise by Selecting category class,Promotion Code and date on a B2E itravel account.
-
-
 		/// Automation ID : 090
 		/// @Author : Thushara V T
 		/// </summary>
@@ -391,7 +380,7 @@ public class T007 extends BaseTest {
 				WebCtrls.DeadWait(5000);
 				WebCtrls.CloseCurrentWindow();
 				WebCtrls.SwithToLastWindow();
-				assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+				Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
 				listeners.addLog("TC_090", "Seeling App page Loaded");
 
 				WebCtrls.PerfectClick(newFITBookingPage.FirstNameFieldUnderNewFITBooking);
@@ -423,36 +412,27 @@ public class T007 extends BaseTest {
 				WebCtrls.PerfectClick(newFITBookingPage.AddCabinButtonUnderNewFITBooking);
 				WebCtrls.PerfectClick(newFITBookingPage.DoneButtonOnPassengersAreaUnderCruiseTab);
 				WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
-				assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+				Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
 				listeners.addLog("TC_090", "Cruise Selection page Loaded");
 				
-//				String SailingStartDate = ExcelHelperMap.get("SailingStartDate");
-//				String SailingEndDate = ExcelHelperMap.get("SailingEndDate");
-//				String Startdate = WebCtrls.GetTextWithTimeOut(selectCabinPage.DateValidation);
-//			    int compareValuewithstartdate = SailingStartDate.compareTo(Startdate);
-//			    int compareValuewithEnddate = SailingEndDate.compareTo(Startdate);
-//			    Assert.assertTrue(compareValuewithstartdate <= 0 && compareValuewithEnddate>=0,"Cruise Startdate is not verified");
-//				listeners.addLog("TC_090", "Cruise startdate is displayed");
-				
-
 				String SailingStartDate=ExcelHelperMap.get("SailingStartDate");
 				String SailingEndDate = ExcelHelperMap.get("SailingEndDate");
-				String Startdate = WebCtrls.GetTextWithTimeOut(selectCabinPage.DateValidation);
+				String Startdate = WebCtrls.GetTextWithTimeOut(cruiseSelectionPage.DateValidation);
 			    Date DSailingStartDate=new SimpleDateFormat("dd/MM/yyyy").parse(SailingStartDate);  
 			    Date DSailingEndDate=new SimpleDateFormat("dd/MM/yyyy").parse(SailingEndDate);  
 			    Date DStartdate=new SimpleDateFormat("dd/MM/yyyy").parse(Startdate);  
-			    Assert.assertTrue(DSailingStartDate.before(DStartdate) && DSailingEndDate.after(DStartdate),"Cruise Startdate is not verified");
+			    Assert.assertTrue(DSailingStartDate.before(DStartdate) || DSailingStartDate.equals(DStartdate) && DSailingEndDate.after(DStartdate) || DSailingEndDate.equals(DStartdate),"Cruise Startdate is not verified");
+			   // Assert.assertTrue(DSailingStartDate.before(DStartdate) ^ DSailingStartDate.equals(DStartdate) ^( DSailingEndDate.after(DStartdate) ^ DSailingEndDate.equals(DStartdate)),"Cruise Startdate is not verified");
 			    listeners.addLog("TC_091", "Cruise start date is displayed");
 				
-			
 				WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
 				WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
-				WebCtrls.DeadWait(2000);
+				WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
 				Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.CabincategoryValidation(ExcelHelperMap.get("CategoryClass"))),"CategoryClass is not verified");
 				listeners.addLog("TC_090", "Category class is displayed");
 
 				WebCtrls.PerfectClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
-				assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.PromocodeValidation(ExcelHelperMap.get("PromoCode"))),"Promocode is not Verified");
+				Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.PromocodeValidation(ExcelHelperMap.get("PromoCode"))),"Promocode is not Verified");
 				listeners.addLog("TC_090", "Promocode is displayed");
 
 		
@@ -466,7 +446,7 @@ public class T007 extends BaseTest {
 			/// Automation ID : 091
 			/// @Author : Thushara V T
 			/// </summary>
-				@Test(enabled = false)
+				@Test(enabled = true)
 				public void TC_091() throws ParseException {
 					ExcelHelperMap = ExcelHelper.getExcelData();
 					Listeners listeners = new Listeners();
@@ -492,18 +472,18 @@ public class T007 extends BaseTest {
 					WebCtrls.DeadWait(5000);
 					WebCtrls.CloseCurrentWindow();
 					WebCtrls.SwithToLastWindow();
-					assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+					Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
 					listeners.addLog("TC_091", "Seeling App page Loaded");					
 					
-//					WebCtrls.WaitForElement(sellingAppHomePage.AgencyOnTheSellingAppHomePage);
-//					WebCtrls.PerfectEditWithTimeOut(sellingAppHomePage.AgencyOnTheSellingAppHomePage,ExcelHelperMap.get("AgencyCode"));
-//					assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage),"Agency Code sugesstion not Loaded");
-//					listeners.addLog("TC_091", "Agency code displayed");
-//
-//					WebCtrls.PerfectClick(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage);
-//					WebCtrls.PerfectClick(sellingAppHomePage.LoadButtonAgencyOnTheSellingAppHomePage);
-//					WebCtrls.PerfectClick(sellingAppHomePage.AgencyMiniProfileIconOnMiniProfilePopup);
-//					
+					WebCtrls.WaitForElement(sellingAppHomePage.AgencyOnTheSellingAppHomePage);
+					WebCtrls.PerfectEditWithTimeOut(sellingAppHomePage.AgencyOnTheSellingAppHomePage,ExcelHelperMap.get("AgencyCode"));
+					Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage),"Agency Code sugesstion not Loaded");
+					listeners.addLog("TC_091", "Agency code displayed");
+
+					WebCtrls.PerfectClick(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage);
+					WebCtrls.PerfectClick(sellingAppHomePage.LoadButtonAgencyOnTheSellingAppHomePage);
+					WebCtrls.PerfectClick(sellingAppHomePage.AgencyMiniProfileIconOnMiniProfilePopup);
+					
 					
 					
 					
@@ -538,13 +518,13 @@ public class T007 extends BaseTest {
 					
 					
 					
-				WebCtrls.PerfectClick(newFITBookingPage.MonthSliderUnderNewFITBooking);
-				WebCtrls.PerfectClick(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking);
-				WebCtrls.Ctrl(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking).clear();
+					WebCtrls.PerfectClick(newFITBookingPage.MonthSliderUnderNewFITBooking);
+					WebCtrls.PerfectClick(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking);
+					WebCtrls.Ctrl(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking).clear();
 					WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking,ExcelHelperMap.get("SailingMonthrange"));
 					WebCtrls.DeadWait(2000);
 					WebCtrls.PerfectSendKeys(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking, Keys.ENTER);
-				WebCtrls.DeadWait(3000);
+					WebCtrls.DeadWait(3000);
 					WebCtrls.JavascriptClick(newFITBookingPage.AdvanceSearchButton);
 					WebCtrls.PerfectClick(newFITBookingPage.ShowAllTabUnderNewFITBooking);
 					WebCtrls.PerfectScroll(newFITBookingPage.PromoCodeFieldUnderNewFITBooking);
@@ -561,42 +541,283 @@ public class T007 extends BaseTest {
 					WebCtrls.PerfectClick(newFITBookingPage.AddCabinButtonUnderNewFITBooking);
 					WebCtrls.PerfectClick(newFITBookingPage.DoneButtonOnPassengersAreaUnderCruiseTab);
 					WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
-					assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+					Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
 					listeners.addLog("TC_091", "Cruise Selection page Loaded");
-					
-//					String SailingStartDate = ExcelHelperMap.get("SailingStartDate");
-//					String SailingEndDate = ExcelHelperMap.get("SailingEndDate");
-//					String Startdate = WebCtrls.GetTextWithTimeOut(selectCabinPage.DateValidation);
-//				    int compareValuewithstartdate = SailingStartDate.compareTo(Startdate);
-//				    int compareValuewithEnddate = SailingEndDate.compareTo(Startdate);
-//				    Assert.assertTrue(compareValuewithstartdate <= 0 && compareValuewithEnddate>=0,"Cruise Startdate is not verified");
-//					listeners.addLog("TC_091", "Cruise start is displayed");
 					
 					String SailingStartDate=ExcelHelperMap.get("SailingStartDate");
 					String SailingEndDate = ExcelHelperMap.get("SailingEndDate");
-					String Startdate = WebCtrls.GetTextWithTimeOut(selectCabinPage.DateValidation);
+					String Startdate = WebCtrls.GetTextWithTimeOut(cruiseSelectionPage.DateValidation);
 				    Date DSailingStartDate=new SimpleDateFormat("dd/MM/yyyy").parse(SailingStartDate);  
 				    Date DSailingEndDate=new SimpleDateFormat("dd/MM/yyyy").parse(SailingEndDate);  
 				    Date DStartdate=new SimpleDateFormat("dd/MM/yyyy").parse(Startdate);  
-				    Assert.assertTrue(DSailingStartDate.before(DStartdate) && DSailingEndDate.after(DStartdate),"Cruise Startdate is not verified");
+				    Assert.assertTrue(DSailingStartDate.before(DStartdate) || DSailingStartDate.equals(DStartdate) && DSailingEndDate.after(DStartdate) || DSailingEndDate.equals(DStartdate),"Cruise Startdate is not verified");
+				  //  Assert.assertTrue(DSailingStartDate.before(DStartdate) ^ DSailingStartDate.equals(DStartdate) ^ DSailingEndDate.after(DStartdate) ^ DSailingEndDate.equals(DStartdate),"Cruise Startdate is not verified");
 				    listeners.addLog("TC_091", "Cruise start date is displayed");
-					
 					
 					WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
 					WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
-					WebCtrls.DeadWait(2000);	
+					WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);	
 					Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.CabincategoryValidation(ExcelHelperMap.get("CategoryClass"))),"CategoryClass is not verified");
 					listeners.addLog("TC_091", "Category class is displayed");
 
 					WebCtrls.PerfectClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
-					assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.PromocodeValidation(ExcelHelperMap.get("PromoCode"))),"Promocode is not Verified");
+					Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.PromocodeValidation(ExcelHelperMap.get("PromoCode"))),"Promocode is not Verified");
 					listeners.addLog("TC_091", "Promocode is displayed");
 
-		
-			
 				}
 				
 		
+				//<summary>
+				/// Test Case Title : "Verify that the user is able to narrow down the search for a particular deal by Selecting Rate Type,Rate Classification and Rate Plan in a B2E itravel account on behalf of B2B.
+				/// Automation ID : 071
+				/// @Author : Thushara V T
+				/// </summary>
+					@Test(enabled = false)
+					public void TC_071() {
+						ExcelHelperMap = ExcelHelper.getExcelData();
+						Listeners listeners = new Listeners();
+
+						getDriver().get(ExcelHelperMap.get("URL"));
+						LoginPage loginPage = new LoginPage();
+						HomePage homePage = new HomePage();
+						SellingAppHomePage sellingAppHomePage = new SellingAppHomePage();
+						CruiseSelectionPage cruiseSelectionPage = new CruiseSelectionPage();
+						BookingConfirmationPage bookingConfirmationPage = new BookingConfirmationPage();
+						NewFITBookingPage newFITBookingPage = new NewFITBookingPage();
+						SelectCabinPage selectCabinPage = new SelectCabinPage();
+						BookingCartPage bookingCartPage = new BookingCartPage();
+						PassengerInformationPage passengerInformationPage = new PassengerInformationPage();
+						PaymentInformationPage paymentInformationPage = new PaymentInformationPage();
+						WebCtrls.PerfectEditWithTimeOut(loginPage.UserNameAreaOnLoginPage, ExcelHelperMap.get("UserName"));
+						WebCtrls.PerfectClick(loginPage.NextButtonOnLoginPage);
+						WebCtrls.PerfectEditWithTimeOut(loginPage.PasswordAreaOnLoginPage, ExcelHelperMap.get("Password"));
+						WebCtrls.PerfectClick(loginPage.LoginButtonOnLoginPage);
+						WebCtrls.WaitForElement(homePage.SellingAppTileOnHomePage);
+						WebCtrls.PerfectClick(homePage.SellingAppTileOnHomePage);
+						WebCtrls.DeadWait(5000);
+						WebCtrls.CloseCurrentWindow();
+						WebCtrls.SwithToLastWindow();
+						Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+						listeners.addLog("TC_071", "Selling App page Loaded");
+
+						WebCtrls.WaitForElement(sellingAppHomePage.AgencyOnTheSellingAppHomePage);
+						WebCtrls.PerfectEditWithTimeOut(sellingAppHomePage.AgencyOnTheSellingAppHomePage,ExcelHelperMap.get("AgencyCode"));
+						Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage),"Agency Code sugesstion not Loaded");
+						listeners.addLog("TC_071", "Agency code displayed");
+
+						WebCtrls.PerfectClick(sellingAppHomePage.AgencyCodeSuggestionOnTheSellingAppHomePage);
+						WebCtrls.PerfectClick(sellingAppHomePage.LoadButtonAgencyOnTheSellingAppHomePage);
+						WebCtrls.PerfectClick(sellingAppHomePage.AgencyMiniProfileIconOnMiniProfilePopup);
+						WebCtrls.PerfectClick(newFITBookingPage.MonthSliderUnderNewFITBooking);
+						WebCtrls.PerfectClick(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking);
+						WebCtrls.Ctrl(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking).clear();
+						WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking,ExcelHelperMap.get("SailingMonthrange"));
+						WebCtrls.DeadWait(2000);
+						WebCtrls.JavascriptClick(newFITBookingPage.AdvanceSearchButton);
+						WebCtrls.PerfectClick(newFITBookingPage.ClickOnDealsTab);
+						WebCtrls.PerfectScroll(newFITBookingPage.RateTypeFieldUnderNewFITBookingPage);
+						WebCtrls.PerfectClick(newFITBookingPage.RateTypeFieldUnderNewFITBookingPage);
+						WebCtrls.PerfectDropdownByText(newFITBookingPage.RateTypeDropdown,ExcelHelperMap.get("RateType"));
+						WebCtrls.PerfectMouseClick(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab);
+						WebCtrls.PerfectClick(newFITBookingPage.RateClassificationFieldUnderNewFITBookingPage);
+						WebCtrls.PerfectDropdownByText(newFITBookingPage.RateClassificationDropdown,ExcelHelperMap.get("RateClassification"));
+						WebCtrls.PerfectMouseClick(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab);
+						WebCtrls.PerfectScroll(newFITBookingPage.RatePlanFieldUnderDealsTab);
+						WebCtrls.PerfectClick(newFITBookingPage.RatePlanFieldUnderDealsTab);
+						WebCtrls.DeadWait(2000);
+						WebCtrls.PerfectClick(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab);
+						WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab,ExcelHelperMap.get("RatePlan"));
+						WebCtrls.PerfectSendKeys(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab, Keys.ENTER);
+						WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
+						Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+						listeners.addLog("TC_071", "Cruise Selection page Loaded");
+						
+						WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
+						WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
+						WebCtrls.DeadWait(5000);
+						WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
+						Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.RateTypeValidation(ExcelHelperMap.get("RateType"))),"RateType is not verified");
+						listeners.addLog("TC_071", "Rate Type is Verified");
+						
+						WebCtrls.JavascriptClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
+						WebCtrls.JavascriptClick(selectCabinPage.InfoTabOnTheCabinSelectionPage);
+						WebCtrls.JavascriptClick(selectCabinPage.IdentifiersTabOnTheCabinSelectionPage);
+						Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.RatePlanValidation(ExcelHelperMap.get("RatePlan"))),"RatePlan is not verified");
+						listeners.addLog("TC_071", "Rate Plan is Verified");
 	
+				
+				
+			
+				
+					}				
+				
+				
+					//<summary>
+					/// Test Case Title : "Verify that the user is able to narrow down the search for a particular deal by Selecting Rate Type,Rate Classification and Rate Plan on a B2B itravel account."
+
+					/// Automation ID : 088
+					/// @Author : Thushara V T
+					/// </summary>
+						@Test(enabled = true)
+						public void TC_088() {
+							ExcelHelperMap = ExcelHelper.getExcelData();
+							Listeners listeners = new Listeners();
+
+							getDriver().get(ExcelHelperMap.get("URL"));
+							LoginPage loginPage = new LoginPage();
+							HomePage homePage = new HomePage();
+							SellingAppHomePage sellingAppHomePage = new SellingAppHomePage();
+							CruiseSelectionPage cruiseSelectionPage = new CruiseSelectionPage();
+							BookingConfirmationPage bookingConfirmationPage = new BookingConfirmationPage();
+							NewFITBookingPage newFITBookingPage = new NewFITBookingPage();
+							SelectCabinPage selectCabinPage = new SelectCabinPage();
+							BookingCartPage bookingCartPage = new BookingCartPage();
+							PassengerInformationPage passengerInformationPage = new PassengerInformationPage();
+							PaymentInformationPage paymentInformationPage = new PaymentInformationPage();
+							WebCtrls.PerfectEditWithTimeOut(loginPage.UserNameAreaOnLoginPage, ExcelHelperMap.get("UserNameB2B"));
+							WebCtrls.PerfectClick(loginPage.NextButtonOnLoginPage);
+							WebCtrls.PerfectEditWithTimeOut(loginPage.PasswordAreaOnLoginPage, ExcelHelperMap.get("Password"));
+							WebCtrls.PerfectClick(loginPage.LoginButtonOnLoginPage);
+							WebCtrls.WaitForElement(homePage.SellingAppTileOnHomePage);
+							WebCtrls.PerfectClick(homePage.SellingAppTileOnHomePage);
+							WebCtrls.DeadWait(5000);
+							WebCtrls.CloseCurrentWindow();
+							WebCtrls.SwithToLastWindow();
+							Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+							listeners.addLog("TC_088", "Selling App page Loaded");
+
+							WebCtrls.PerfectClick(newFITBookingPage.FirstNameFieldUnderNewFITBooking);
+							WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.FirstNameFieldUnderNewFITBooking,ExcelHelperMap.get("PassengerFirstName"));
+							WebCtrls.DeadWait(2000);
+							WebCtrls.PerfectSendKeys(newFITBookingPage.FirstNameFieldUnderNewFITBooking, Keys.ENTER);
+							WebCtrls.DeadWait(2000);
+							WebCtrls.PerfectClick(sellingAppHomePage.LoadButtonOnTheSellingAppHomePage);
+							WebCtrls.PerfectClick(sellingAppHomePage.MiniProfileOnSellingAppHomePage);
+							WebCtrls.PerfectClick(newFITBookingPage.MonthSliderUnderNewFITBooking);
+							WebCtrls.PerfectClick(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking);
+							WebCtrls.Ctrl(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking).clear();
+							WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking,ExcelHelperMap.get("SailingMonthrangeB2B"));
+							WebCtrls.DeadWait(2000);
+							WebCtrls.JavascriptClick(newFITBookingPage.AdvanceSearchButton);
+							WebCtrls.PerfectClick(newFITBookingPage.ClickOnDealsTab);
+							WebCtrls.PerfectScroll(newFITBookingPage.RateTypeFieldUnderNewFITBookingPage);
+							WebCtrls.PerfectClick(newFITBookingPage.RateTypeFieldUnderNewFITBookingPage);
+							WebCtrls.PerfectDropdownByText(newFITBookingPage.RateTypeDropdown,ExcelHelperMap.get("RateType"));
+							WebCtrls.PerfectMouseClick(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab);
+							WebCtrls.PerfectClick(newFITBookingPage.RateClassificationFieldUnderNewFITBookingPage);
+							WebCtrls.PerfectDropdownByText(newFITBookingPage.RateClassificationDropdown,ExcelHelperMap.get("RateClassification"));
+							WebCtrls.PerfectMouseClick(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab);
+							WebCtrls.PerfectScroll(newFITBookingPage.RatePlanFieldUnderDealsTab);
+							WebCtrls.PerfectClick(newFITBookingPage.RatePlanFieldUnderDealsTab);
+							WebCtrls.DeadWait(2000);
+							WebCtrls.PerfectClick(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab);
+							WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab,ExcelHelperMap.get("RatePlan"));
+							WebCtrls.PerfectSendKeys(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab, Keys.ENTER);
+							WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
+							assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+							listeners.addLog("TC_088", "Cruise Selection page Loaded");
+							
+							WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
+							WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
+							WebCtrls.DeadWait(5000);
+							WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
+							Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.RateTypeValidation(ExcelHelperMap.get("RateType"))),"RateType is not verified");
+							listeners.addLog("TC_088", "Rate Type is Verified");
+							
+							WebCtrls.JavascriptClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
+							WebCtrls.JavascriptClick(selectCabinPage.InfoTabOnTheCabinSelectionPage);
+							WebCtrls.JavascriptClick(selectCabinPage.IdentifiersTabOnTheCabinSelectionPage);
+							Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.RatePlanValidation(ExcelHelperMap.get("RatePlan"))),"RatePlan is not verified");
+							listeners.addLog("TC_088", "Rate Plan is Verified");
+		
+					
+					
+				
+					
+						}				
+					
+						//<summary>
+						/// Test Case Title : Verify that the user is able to narrow down the search for a particular deal by Selecting Rate Type,Rate Classification and Rate Plan in a B2E itravel account
+
+						/// Automation ID : 021
+						/// @Author : Thushara V T
+						/// </summary>
+							@Test(enabled = true)
+							public void TC_021() {
+								ExcelHelperMap = ExcelHelper.getExcelData();
+								Listeners listeners = new Listeners();
+
+								getDriver().get(ExcelHelperMap.get("URL"));
+								LoginPage loginPage = new LoginPage();
+								HomePage homePage = new HomePage();
+								SellingAppHomePage sellingAppHomePage = new SellingAppHomePage();
+								CruiseSelectionPage cruiseSelectionPage = new CruiseSelectionPage();
+								BookingConfirmationPage bookingConfirmationPage = new BookingConfirmationPage();
+								NewFITBookingPage newFITBookingPage = new NewFITBookingPage();
+								SelectCabinPage selectCabinPage = new SelectCabinPage();
+								BookingCartPage bookingCartPage = new BookingCartPage();
+								PassengerInformationPage passengerInformationPage = new PassengerInformationPage();
+								PaymentInformationPage paymentInformationPage = new PaymentInformationPage();
+								WebCtrls.PerfectEditWithTimeOut(loginPage.UserNameAreaOnLoginPage, ExcelHelperMap.get("UserName"));
+								WebCtrls.PerfectClick(loginPage.NextButtonOnLoginPage);
+								WebCtrls.PerfectEditWithTimeOut(loginPage.PasswordAreaOnLoginPage, ExcelHelperMap.get("Password"));
+								WebCtrls.PerfectClick(loginPage.LoginButtonOnLoginPage);
+								WebCtrls.WaitForElement(homePage.SellingAppTileOnHomePage);
+								WebCtrls.PerfectClick(homePage.SellingAppTileOnHomePage);
+								WebCtrls.DeadWait(5000);
+								WebCtrls.CloseCurrentWindow();
+								WebCtrls.SwithToLastWindow();
+								Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab),"Selling App page is not Loaded");
+								listeners.addLog("TC_021", "Selling App page Loaded");
+
+								WebCtrls.PerfectClick(newFITBookingPage.FirstNameFieldUnderNewFITBooking);
+								WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.FirstNameFieldUnderNewFITBooking,ExcelHelperMap.get("PassengerFirstName"));
+								WebCtrls.DeadWait(2000);
+								WebCtrls.PerfectSendKeys(newFITBookingPage.FirstNameFieldUnderNewFITBooking, Keys.ENTER);
+								WebCtrls.DeadWait(2000);
+								WebCtrls.PerfectClick(sellingAppHomePage.LoadButtonOnTheSellingAppHomePage);
+								WebCtrls.PerfectClick(sellingAppHomePage.MiniProfileOnSellingAppHomePage);				
+								WebCtrls.PerfectClick(newFITBookingPage.MonthSliderUnderNewFITBooking);
+								WebCtrls.PerfectClick(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking);
+								WebCtrls.Ctrl(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking).clear();
+								WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.SailingMonthrangeFieldUnderNewFITBooking,ExcelHelperMap.get("SailingMonthrange"));
+								WebCtrls.DeadWait(2000);
+								WebCtrls.JavascriptClick(newFITBookingPage.AdvanceSearchButton);
+								WebCtrls.PerfectClick(newFITBookingPage.ClickOnDealsTab);
+								WebCtrls.PerfectScroll(newFITBookingPage.RateTypeFieldUnderNewFITBookingPage);
+								WebCtrls.PerfectClick(newFITBookingPage.RateTypeFieldUnderNewFITBookingPage);
+								WebCtrls.PerfectDropdownByText(newFITBookingPage.RateTypeDropdown,ExcelHelperMap.get("RateType"));
+								WebCtrls.PerfectMouseClick(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab);
+								WebCtrls.PerfectClick(newFITBookingPage.RateClassificationFieldUnderNewFITBookingPage);
+								WebCtrls.PerfectDropdownByText(newFITBookingPage.RateClassificationDropdown,ExcelHelperMap.get("RateClassification"));
+								WebCtrls.PerfectMouseClick(newFITBookingPage.CruiseCodeInputAreaUnderCruiseTab);	
+								WebCtrls.PerfectScroll(newFITBookingPage.RatePlanFieldUnderDealsTab);
+								WebCtrls.PerfectClick(newFITBookingPage.RatePlanFieldUnderDealsTab);
+								WebCtrls.DeadWait(2000);
+								WebCtrls.PerfectClick(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab);
+								WebCtrls.PerfectEditWithTimeOut(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab,ExcelHelperMap.get("RatePlan"));
+								WebCtrls.PerfectSendKeys(newFITBookingPage.RatePlanFieldSearchBoxUnderDealsTab, Keys.ENTER);
+								WebCtrls.PerfectClick(newFITBookingPage.ShowVoyagesButtonUnderCruiseTab);
+								Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage),"Cruise selection page is not Loaded");
+								listeners.addLog("TC_021", "Cruise Selection page Loaded");
+								
+								WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
+								WebCtrls.PerfectClick(cruiseSelectionPage.ContinueButtonOnTheAlertPopup);
+								WebCtrls.DeadWait(5000);
+								WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
+								Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.RateTypeValidation(ExcelHelperMap.get("RateType"))),"RateType is not verified");
+								listeners.addLog("TC_021", "Rate Type is Verified");
+
+								WebCtrls.JavascriptClick(selectCabinPage.DetailsButtonOnTheCabinSelectionPage);
+								WebCtrls.JavascriptClick(selectCabinPage.InfoTabOnTheCabinSelectionPage);
+								WebCtrls.JavascriptClick(selectCabinPage.IdentifiersTabOnTheCabinSelectionPage);
+								Assert.assertTrue(WebCtrls.PerfectDisplayedWithTimeOut(selectCabinPage.RatePlanValidation(ExcelHelperMap.get("RatePlan"))),"RatePlan is not verified");
+								listeners.addLog("TC_021", "Rate Plan is Verified");
+			
+						
+						
+					
+						
+							}				
 	
 }

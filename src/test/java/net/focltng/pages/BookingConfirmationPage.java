@@ -51,47 +51,65 @@ public class BookingConfirmationPage {
 	public By PaxValidaiton = By.xpath("//span[@class='w-auto left dot-view ng-binding']");
 		
 	public By PassengerAlreadyExist = By.xpath("//span[text()='The Passenger already exists.']");
+	//Thushara
 	
 	public By MoreOptionsButtonUnderConfirmationpage = By.xpath("//a[@class='bkg_a_holdr act_108 rel']");
+	//Thushara
 	
 	public By AddFacilitiesButtonUnderConfirmationpage = By.xpath("//span[@class='tip_data']");
+	//Thushara
 	
 	public By FacilityAdditionCheckboxUnderConfirmationpage = By.xpath("(//input[@class='left'])[2]");
-		
+	//Thushara
+	
 	public By SaveButtonUnderConfirmationpage = By.xpath("//button[@ng-click='proceedToModifyFacilityForCabin(cruiseDetailsVO)']");
+	//Thushara
 	
 	public By FacilityFieldUnderConfirmationpage = By.xpath("//span[normalize-space()='Facilities']");
+	//Thushara
 	
 	public By ViewDetailsButtonUnderConfirmationpage = By.xpath("//div[@class='promo_popup promo_popup_03 collapse in ng-scope']//a[@class='link_'][normalize-space()='View Details']");
+	//Thushara
 	
 	public By FacilityListUnderConfirmationpage = By.xpath("//div[@class='tab-pane ng-scope active']//div[@class='fac_head'][normalize-space()='Facility Name']");
+	//Thushara
 	
 	public By ViewDetailsUnderConfirmationpage =By.xpath("//div[@class='fac_sub_head text-left ng-binding ng-scope'][normalize-space()='A2']");
+	//Thushara
 	
 	public By ViewCotDetailsUnderConfirmationpage =By.xpath("//span[normalize-space()='CO - Reserve Infant Cot']");
 
+	//Thushara
 	public By CnfButtonForSecondPassenger = By.xpath("//div[text()='A2']//following::div[@class='fac_sub_content'][2]//input[@type='checkbox']");
-	
-	//public By CnfButtonForSecondPassenger2 =By.xpath("(//input[@value='{\"paxRefId\":2,\"chkLabel\":\"A2\",\"paxType\":\"A\",\"paxIdentity\":\"A2\",\"cbStatus\":false}'])[1]");
-	
+		
+	//Thushara
 	public By StatusOfFacilitySelected= By.xpath("(//i[@ng-if='pdt.tempFacStatus'])[1]");
 	
+	//Thushara
 	public By InitialCountOnBookingConfirmationPage = By.xpath("(//div[@sp-label='label.cruiseSearchResultWidget.fcltyAvail']/following::div[@class='fac_content ng-binding'])[2]");
 	
+	//Thushara
 	public By FinalCountOnBookingConfirmationPage = By.xpath("(//div[@sp-label='label.cruiseSearchResultWidget.fcltyAvail']/following::div[@class='fac_content ng-binding'])[2]");
 	
+	//Thushara
 	public By StatusOfSecondFacilitySelected =By.xpath("(//i[@ng-if='pdt.tempFacStatus'])[2]");
 	
+	//Thushara
 	public By FinalCountOfSecondFacilityOnBookingConfirmationPage=By.xpath("(//div[@sp-label='label.cruiseSearchResultWidget.fcltyAvail']/following::div[@class='fac_content ng-binding'])[5]");
 	
+	//Thushara
 	public By CnfButtonForSecondfacility = By.xpath("(//i[@ng-if='pdt.tempFacStatus'])[2]");
 
+	//Thushara
 	public By FinalWaitlistCountOnBookingConfirmationPageOfFirstfacility =By.xpath("(//div[@class='fac_content ng-binding'])[3]");
 
+	//Thushara
 	public By FinalWaitlistCountOnBookingConfirmationPageOfSecondFacility =By.xpath("(//div[@class='fac_content ng-binding'])[6]");
 
+	//Thushara
 	public By InitialWaitlistCountOnBookingConfirmationPageOfFirstfacility =By.xpath("(//div[@class='fac_content ng-binding'])[3]");
 
+	//Thushara
 	public By InitiallWaitlistCountOnBookingConfirmationPageOfSecondFacility =By.xpath("(//div[@class='fac_content ng-binding'])[6]");
 
 
