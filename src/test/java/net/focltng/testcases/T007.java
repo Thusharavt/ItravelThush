@@ -551,7 +551,7 @@ public class T007 extends BaseTest {
 				    Date DSailingEndDate=new SimpleDateFormat("dd/MM/yyyy").parse(SailingEndDate);  
 				    Date DStartdate=new SimpleDateFormat("dd/MM/yyyy").parse(Startdate);  
 				    Assert.assertTrue(DSailingStartDate.before(DStartdate) || DSailingStartDate.equals(DStartdate) && DSailingEndDate.after(DStartdate) || DSailingEndDate.equals(DStartdate),"Cruise Startdate is not verified");
-				  //  Assert.assertTrue(DSailingStartDate.before(DStartdate) ^ DSailingStartDate.equals(DStartdate) ^ DSailingEndDate.after(DStartdate) ^ DSailingEndDate.equals(DStartdate),"Cruise Startdate is not verified");
+				 
 				    listeners.addLog("TC_091", "Cruise start date is displayed");
 					
 					WebCtrls.PerfectClick(cruiseSelectionPage.ProceedButtonOnTheCruiseSelectionPage);
